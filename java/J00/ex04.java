@@ -21,7 +21,7 @@ public class ex04 {
     }
 
     public static void main(String[] args){
-        statusName(args[0].toInt());
-        statusNamelseif(args[0].toInt());
+        statusName(Integer.valueOf(args[0]));
+        statusNamelseif(Integer.valueOf(args[0]));
     }
 }
