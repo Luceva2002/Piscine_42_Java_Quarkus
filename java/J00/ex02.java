@@ -1,20 +1,23 @@
-import static java.lang.StringUTF16.indexOf;
+import jdk.dynalink.beans.StaticClass;
 
-public class ex02()
-{
+public class ex02{
     static String extractDomain(String email){
         if(email.indexOf('@') <= 0)
-            System.exit(0);
-        else
-        {
-            String ciccio;
-            int num = email.indexOf('@');
-            whil
-            ciccio = email[num++]
+            return IllegalArgumentException("Dominio non valido");
+        else{
+           int num = email.indexOf('@');
+           String domain = email.substring(num + 1);
+           return domain;
         }
     }
 
-    public static void main(String[] email){
+    static String IllegalArgumentException(String ciccio) {
+        return(ciccio);
+    }
 
+    public static void main(String[] email){
+        String domain;
+        domain = extractDomain(email[0]);
+        System.out.println(domain);
     }
 }
