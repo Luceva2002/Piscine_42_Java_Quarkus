@@ -2,8 +2,8 @@ public class ex04 {
 
     static String statusName(int code) {
         return switch (code) {
-            case 1 -> "iscrizioni aperte";
-                case 2 -> "iscrizioni chiuse";
+            case 1 -> "Iscrizioni aperte";
+                case 2 -> "Iscrizioni chiuse";
             case 3 -> "evento chiuso";
             default -> throw new IllegalArgumentException("stato sconosciuto: " + code);
         };
@@ -21,7 +21,10 @@ public class ex04 {
     }
 
     public static void main(String[] args){
-        statusName(Integer.valueOf(args[0]));
-        statusNamelseif(Integer.valueOf(args[0]));
+        String ciccio = statusName(Integer.valueOf(args[0]));
+        System.out.println(ciccio);
+        ciccio = statusNamelseif(Integer.valueOf(args[0]));
+        System.out.println(ciccio);
+
     }
 }
