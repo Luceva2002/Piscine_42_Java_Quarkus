@@ -2,8 +2,8 @@ public class ex04 {
 
     static String statusName(int code) {
         return switch (code) {
-            case 1 -> "Iscrizioni aperte";
-                case 2 -> "Iscrizioni chiuse";
+            case 1 -> "iscrizioni aperte";
+                case 2 -> "iscrizioni chiuse";
             case 3 -> "evento chiuso";
             default -> throw new IllegalArgumentException("stato sconosciuto: " + code);
         };
