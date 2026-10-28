@@ -2,17 +2,12 @@ import jdk.dynalink.beans.StaticClass;
 
 public class ex02{
     static String extractDomain(String email){
-        if(email.indexOf('@') <= 0)
-            return IllegalArgumentException("Dominio non valido");
+        if(email.indexOf('@') <= 0 || email = null)
+            throw new IllegalArgumentException("Dominio non valido");
         else{
            int num = email.indexOf('@');
-           String domain = email.substring(num + 1);
-           return domain;
+           return email.substring(num + 1);
         }
-    }
-
-    static String IllegalArgumentException(String ciccio) {
-        return(ciccio);
     }
 
     public static void main(String[] email){
