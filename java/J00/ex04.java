@@ -20,8 +20,8 @@ public class ex04 {
             throw new IllegalArgumentException("stato sconosciuto: " + code);
     }
 
-    public static void main(int[] pino){
-        statusName(pino[0]);
-        statusNamelseif(pino[0]);
+    public static void main(String[] args){
+        statusName(args[0].toInt());
+        statusNamelseif(args[0].toInt());
     }
 }
