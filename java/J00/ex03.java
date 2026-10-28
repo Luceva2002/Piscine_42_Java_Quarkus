@@ -34,7 +34,7 @@ public class ex03 {
             max(new int[0]);
             throw new AssertionError();
         } catch (IllegalArgumentException expected) {
-            // ok
+
         }
         System.out.println("OK");
     }
