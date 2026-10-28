@@ -1,3 +1,27 @@
-public class ex04{
-    
+public class ex04 {
+
+    static String statusName(int code) {
+        return switch (code) {
+            case 1 -> "iscrizioni aperte";
+                case 2 -> "iscrizioni chiuse";
+            case 3 -> "evento chiuso";
+            default -> throw new IllegalArgumentException("stato sconosciuto: " + code);
+        };
+    }
+
+    static String statusNamelseif(int code){
+        if(code == 1)
+            return ("Iscrizioni Aperte");
+        else if(code == 2)
+            return("Iscrizioni Chiuse");
+        else if(code == 3)
+            return("Evento chiuso");
+        else
+            throw new IllegalArgumentException("stato sconosciuto: " + code);
+    }
+
+    public static void main(int[] pino){
+        statusName(pino[0]);
+        statusNamelseif(pino[0]);
+    }
 }
