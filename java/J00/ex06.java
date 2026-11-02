@@ -1,4 +1,4 @@
-public class ex06(
+/*public class ex06(
 
     public static void main(){
         
@@ -7,4 +7,4 @@ public class ex06(
     static void check(boolean cond) {
         if (!cond) throw new AssertionError();
     }
-)
+)*/
