@@ -1,13 +1,21 @@
-public class ex06(
-
-    public static void main(){
+public class ex06 {
+    public static void main(String[] args) {
         Integer a = 127, b = 127;
-        Integer c = 1000, d = 1000;
-        Integer missing = null; int x = missing;
-        String s = new String("a");
-    }
+        System.out.println(a == b);
 
-    static void check(boolean cond) {
-        if (!cond) throw new AssertionError();
+        Integer c = 1000, d = 1000;
+        System.out.println(c == d);
+        System.out.println(c.equals(d));
+
+        Integer missing = null;
+        try {
+            int x = missing;
+        } catch (NullPointerException e) {
+            System.out.println("NullPointerException");
+        }
+
+        String s = new String("a");
+        System.out.println(s == "a");
+        System.out.println(s.equals("a"));
     }
-)
+}
