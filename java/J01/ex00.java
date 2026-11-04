@@ -2,7 +2,21 @@ public class ex00{
 
     public static void main(String[] args){
         Pool p = new Pool(1, "Blu Club", "Milano", 80);
-
+        System.Out.println(check(p.getId() == 1);
+        System.Out.println(check(p.getName() == "Blu Club");
+        System.Out.println(check(p.getCity() == "Milano");
+        System.Out.println(check(p.getCapacity() == 80);
+        try{
+            new Pool(2, "X", "Y", -1);
+            throw new AssertionError();
+        }
+        catch (illegalArgumentExeption expected){
+            //ok
+        }
+        System.Out.println("OK");
+    }
+    static void check(boolean cond){
+        if(!cond) throw new AssertionError();
     }
 
 }
