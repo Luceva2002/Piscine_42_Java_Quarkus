@@ -1,24 +1,23 @@
-public class ex00{
+public class ex07{
 
     public static void main(String[] args){
         Pool p = new Pool(1, "Blu Club", "Milano", 80);
-        System.Out.println(check(p.getId() == 1);
-        System.Out.println(check(p.getName() == "Blu Club");
-        System.Out.println(check(p.getCity() == "Milano");
-        System.Out.println(check(p.getCapacity() == 80);
+        System.out.println(p.getId() == (1));
+        System.out.println(p.getName().equals("Blu Club"));
+        System.out.println(p.getCity().equals("Milano"));
+        System.out.println(p.getCapacity() == (80));
         try{
             new Pool(2, "X", "Y", -1);
             throw new AssertionError();
         }
-        catch (illegalArgumentExeption expected){
+        catch (IllegalArgumentException expected){
             //ok
         }
-        System.Out.println("OK");
+        System.out.println("OK");
     }
     static void check(boolean cond){
         if(!cond) throw new AssertionError();
     }
-
 }
 
 class Pool{
@@ -30,6 +29,10 @@ class Pool{
     Pool(int id, String name, String city, int capacity){
         if (capacity < 0) throw new IllegalArgumentException("capienza negativa");
         this.id = id;
+        this.name = name;
+        this.city = city;
+        this.capacity = capacity;
+
     }
 
     int getId() { return id; };
@@ -39,7 +42,8 @@ class Pool{
 
 
     @Override
-    public STring toString() {
+    public String toString() {
         return "Pool{id=" + id + "\n, name='" + name + "'\n, city='" + city + "'\n, capacity=" + capacity + "}";
     }
 }
+
